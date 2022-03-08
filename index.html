@@ -226,7 +226,14 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
-
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carouselPause">
+                            <i class="fa fa-pause"></i>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carouselPlay">
+                            <i class="fa fa-play"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -365,6 +372,27 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+    <!--Tell to the browser that when the document is finish loading and ready to ru a script , 
+         it should run whenever is insight the scope block -->
+
+         <!--The goal here is to make sure that the single button now switches between Play and Pause when clicked, 
+            in both the icon appearance and its functionality-->
+<script>
+    $(function () {
+        $(".carousel").carousel({ interval: 2000 });
+        $("#carouselButton").click(function () {
+            if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+                $(".carousel").carousel("pause");
+                $("#carouselButton").children("i").removeClass("fa-pause");
+                $("#carouselButton").children("i").addClass("fa-play");
+            } else {
+                    $(".carousel").carousel("cicle");
+                    $("#carouselButton").children("i").removeClass;
+                    $("#carouselButton").children("i").addClass("fa-pause");
+                   }
+        });
+    });
+</script>
    
 </body>
 

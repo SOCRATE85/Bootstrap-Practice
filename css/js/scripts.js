@@ -1,14 +1,33 @@
 $(function () {
   $(".carousel").carousel({ interval: 2000 });
-  $("#carouselButton").click(function () {
-    if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+  $("#carouselButtonAction").click(function () {
+    console.log("Hiii");
+    if ($("#carouselButtonAction").children("i").hasClass("fa-pause")) {
+      console.log("1");
       $(".carousel").carousel("pause");
-      $("#carouselButton").children("i").removeClass("fa-pause");
-      $("#carouselButton").children("i").addClass("fa-play");
+      $("#carouselButtonAction").children("i").removeClass("fa-pause");
+      $("#carouselButtonAction").children("i").addClass("fa-play");
     } else {
-      $(".carousel").carousel("cicle");
-      $("#carouselButton").children("i").removeClass;
-      $("#carouselButton").children("i").addClass("fa-pause");
+      console.log("2");
+      $(".carousel").carousel("cycle");
+      $("#carouselButtonAction").children("i").removeClass("fa-play");
+      $("#carouselButtonAction").children("i").addClass("fa-pause");
     }
   });
 });
+
+// $(function () {
+//         $(".carousel").carousel({ interval: 2000 });
+//         $("#carouselButtonAction").click(function () {console.log("Hiii")
+//             if ($("#carouselButtonAction").children("i").hasClass("fa-pause")) {console.log("1")
+//                 $(".carousel").carousel("pause");
+//                 $("#carouselButtonAction").children("i").removeClass("fa-pause");
+//                 $("#carouselButtonAction").children("i").addClass("fa-play");
+//             } else {
+//                 console.log("2")
+//                 $(".carousel").carousel("cycle");
+//                 $("#carouselButtonAction").children("i").removeClass("fa-play");
+//                 $("#carouselButtonAction").children("i").addClass("fa-pause");
+//             }
+//         });
+//     });

@@ -7,7 +7,7 @@ h3 {
   font-family: "Lobster", cursive; }
 
 h2 {
-  color: #3046c5; }
+  color: #e5ff00; }
 
 header h2 {
   color: #cec8ff; }
@@ -19,7 +19,7 @@ header h2 {
 .jumbotron {
   margin: 0;
   padding: 30px;
-  background-image: linear-gradient(to right, #5637dd, #3046c5, #60106b);
+  background-image: linear-gradient(to right, #5637dd, #e5ff00, #60106b);
   color: white; }
 
 .row-content {

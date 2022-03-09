@@ -227,11 +227,8 @@
                         <span class="sr-only">Next</span>
                     </a>
                     <div class="btn-group" id="carouselButton">
-                        <button class="btn btn-danger btn-sm" id="carouselPause">
-                            <i class="fa fa-pause"></i>
-                        </button>
-                        <button class="btn btn-danger btn-sm" id="carouselPlay">
-                            <i class="fa fa-play"></i>
+                        <button class="btn btn-danger btn-sm" id="carouselButtonAction">
+                            <i class="fa  fa-pause"></i>
                         </button>
                     </div>
                 </div>
@@ -380,20 +377,21 @@
 <script>
     $(function () {
         $(".carousel").carousel({ interval: 2000 });
-        $("#carouselButton").click(function () {
-            if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+        $("#carouselButtonAction").click(function () {console.log("Hiii")
+            if ($("#carouselButtonAction").children("i").hasClass("fa-pause")) {console.log("1")
                 $(".carousel").carousel("pause");
-                $("#carouselButton").children("i").removeClass("fa-pause");
-                $("#carouselButton").children("i").addClass("fa-play");
+                $("#carouselButtonAction").children("i").removeClass("fa-pause");
+                $("#carouselButtonAction").children("i").addClass("fa-play");
             } else {
-                    $(".carousel").carousel("cicle");
-                    $("#carouselButton").children("i").removeClass;
-                    $("#carouselButton").children("i").addClass("fa-pause");
-                   }
+                console.log("2")
+                $(".carousel").carousel("cycle");
+                $("#carouselButtonAction").children("i").removeClass("fa-play");
+                $("#carouselButtonAction").children("i").addClass("fa-pause");
+            }
         });
     });
 </script>
-   
+
 </body>
 
 </html>
